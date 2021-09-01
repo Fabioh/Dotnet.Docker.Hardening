@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31613.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AD31F28E-E848-4887-8873-B622F6D797A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Docker.Hardening.API", "src\Dotnet.Docker.Hardening.API\Dotnet.Docker.Hardening.API.csproj", "{2B8F9549-98C0-4DF0-A06E-C9D5DE745092}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B8F9549-98C0-4DF0-A06E-C9D5DE745092}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8F9549-98C0-4DF0-A06E-C9D5DE745092}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8F9549-98C0-4DF0-A06E-C9D5DE745092}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8F9549-98C0-4DF0-A06E-C9D5DE745092}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2B8F9549-98C0-4DF0-A06E-C9D5DE745092} = {AD31F28E-E848-4887-8873-B622F6D797A1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2083B2D3-E38D-42B6-83CF-8E983BA6AEB7}
+	EndGlobalSection
+EndGlobal

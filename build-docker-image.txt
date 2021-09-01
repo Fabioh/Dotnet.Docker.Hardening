@@ -1,0 +1,7 @@
+# docker build  -t dotnet-hardening:1 -f .\src\Dotnet.Docker.Hardening.API\Dockerfile .
+
+# build image 
+# docker build  -t dotnet-hardening:1 .
+
+# run image with terminal
+# docker run --rm -it --entrypoint sh dotnet-hardening:1
