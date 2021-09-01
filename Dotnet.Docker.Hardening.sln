@@ -4,8 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AD31F28E-E848-4887-8873-B622F6D797A1}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnet.Docker.Hardening.API", "src\Dotnet.Docker.Hardening.API\Dotnet.Docker.Hardening.API.csproj", "{2B8F9549-98C0-4DF0-A06E-C9D5DE745092}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Dotnet.Docker.Hardening.API", "src\Dotnet.Docker.Hardening.API\Dotnet.Docker.Hardening.API.csproj", "{2B8F9549-98C0-4DF0-A06E-C9D5DE745092}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
