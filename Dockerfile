@@ -18,4 +18,4 @@ RUN dotnet publish "Dotnet.Docker.Hardening.API.csproj" -c Release -o /app/publi
 FROM mcr.microsoft.com/dotnet/runtime-deps:5.0.9-alpine3.13 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["./Dotnet.Docker.Hardening.API.dll"]
+ENTRYPOINT ["./Dotnet.Docker.Hardening.API"]
