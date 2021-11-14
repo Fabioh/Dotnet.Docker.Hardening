@@ -1,7 +1,11 @@
-# docker build  -t dotnet-hardening:1 -f .\src\Dotnet.Docker.Hardening.API\Dockerfile .
-
 # build image 
-# docker build  -t dotnet-hardening:1 .
+# docker build -t dotnet-hardening:1 .
 
 # run image with terminal
 # docker run --rm -it --entrypoint sh dotnet-hardening:1
+
+# run image with app
+# docker run --rm -d -p 5000:5000 dotnet-hardening:2
+# http://localhost:5000/weatherforecast
+
+
