@@ -9,3 +9,5 @@
 # http://localhost:5000/weatherforecast
 
 
+# scan image 
+# docker scan dotnet-hardening:2
