@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dotnet-hardening-deployment
+  labels:
+    app: dotnet-hardening
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dotnet-hardening
+  template:
+    metadata:
+      labels:
+        app: dotnet-hardening
+    spec:
+      containers:
+      - name: dotnet-hardening
+        # image: dotnet-hardening:2
+        image: fabiohenrique/dotnet-hardening:2
+        imagePullPolicy: Always
+        ports:
+          - containerPort: 5000
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        securityContext:  
+          runAsNonRoot: true
+          runAsUser: 1000
+          # runAsGroup: 2000
+          allowPrivilegeEscalation: false
+          privileged: false
+          readOnlyRootFilesystem: true
+          capabilities:
+            drop:
+              - all
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: dotnet-shardening-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: dotnet-hardening
+  ports:
+  # Default port used by the image
+  - port: 5000
+    targetPort: 5000

@@ -19,7 +19,7 @@ FROM mcr.microsoft.com/dotnet/runtime-deps:5.0.9-alpine3.13 AS final
 
 # create a new user and change directory ownership
 #RUN addgroup --group dotnetgroup --gid 2000 && adduser --disabled-password \
-RUN adduser --disabled-password \
+RUN adduser -u 1000 --disabled-password \
   --home /app \
   --gecos '' dotnetuser && chown -R dotnetuser /app
 
@@ -34,6 +34,8 @@ WORKDIR /app
 EXPOSE 5000
 # ENV ASPNETCORE_URLS=http://*:5000
 COPY --from=publish /app/publish .
+
+ENV COMPlus_EnableDiagnostics=0
 
 # instruct Kestrel to expose API on port 5000
 ENTRYPOINT ["./Dotnet.Docker.Hardening.API", "--urls", "http://*:5000"]
