@@ -1,3 +1,8 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: dotnet-herdening-svcaccount
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -14,6 +19,7 @@ spec:
       labels:
         app: dotnet-hardening
     spec:
+      serviceAccountName: dotnet-herdening-svcaccount
       containers:
       - name: dotnet-hardening
         # image: dotnet-hardening:2

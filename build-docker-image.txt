@@ -11,3 +11,12 @@
 
 # scan image 
 # docker scan dotnet-hardening:2
+
+# kubenetes
+# kubectl apply -f k8s/deployment.yaml
+#k get svc dotnet-shardening-service -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'
+# echo "http://$(kubectl get svc dotnet-shardening-service -o jsonpath='{.status.loadBalancer.ingress[0].hostname}'):5000/weatherforecast"
+# echo "http://$(kubectl get svc dotnet-shardening-service -o jsonpath='{.status.loadBalancer.ingress[0].ip}'):5000/weatherforecast"
+
+# não sei se o o comando a seguir funciona
+# echo "http://$(kubectl get svc dotnet-shardening-service -o jsonpath='{.status.loadBalancer.ingress[0].ip} or {.status.loadBalancer.ingress[0].hostname}'):5000/weatherforecast"
