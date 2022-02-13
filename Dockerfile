@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine AS publish
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine AS publish
 #RUN dotnet publish "Dotnet.Docker.Hardening.API.csproj" -c Release -o /app/publish -r alpine-x64
 WORKDIR /src
 RUN mkdir Dotnet.Docker.Hardening.API/
@@ -15,7 +15,7 @@ RUN dotnet publish "./Dotnet.Docker.Hardening.API/Dotnet.Docker.Hardening.API.cs
   /p:PublishTrimmed=true \
   /p:PublishSingleFile=true
 
-FROM mcr.microsoft.com/dotnet/runtime-deps:5.0.9-alpine3.13 AS final
+FROM mcr.microsoft.com/dotnet/runtime-deps:6.0.2-alpine3.14 AS final
 
 # create a new user and change directory ownership
 #RUN addgroup --group dotnetgroup --gid 2000 && adduser --disabled-password \
