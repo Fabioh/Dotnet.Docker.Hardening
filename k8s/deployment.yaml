@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ServiceAccount
 metadata:
-  name: dotnet-herdening-svcaccount
+  name: dotnet-hardening-svcaccount
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -19,11 +19,11 @@ spec:
       labels:
         app: dotnet-hardening
     spec:
-      serviceAccountName: dotnet-herdening-svcaccount
+      serviceAccountName: dotnet-hardening-svcaccount
       containers:
       - name: dotnet-hardening
         # image: dotnet-hardening:2
-        image: fabiohenrique/dotnet-hardening:2
+        image: fabiohenrique/dotnet-hardening:3
         imagePullPolicy: Always
         ports:
           - containerPort: 5000
@@ -48,7 +48,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dotnet-shardening-service
+  name: dotnet-hardening-service
 spec:
   type: LoadBalancer
   selector:
